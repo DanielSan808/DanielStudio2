@@ -1,0 +1,104 @@
+var font1, words, pangram,fontSize;
+var myText = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ       abcdefghiklmnopqrstuvwxyz!?.,\:\;\[\]       0123456789 <>/\\@#$%&=+-×÷*      ';
+var size = 46;
+var pangram = 'Sixty zippers were quickly picked from the woven jute bag.             ';
+//var listOfColors = [color('#FF9AA2'), color('#FFDAC1'), color('E2F0CB'), color('#B5EAD7'), color('#C7CEEA')];
+
+  var purple = color(168, 111, 186);
+  var bluish = color(159, 195, 230);
+  var red = color(210, 8, 45);
+  var green = color(139, 230, 180);
+  var pink = color(247, 139, 209);
+  var yellow = color(245, 215, 122);
+  
+  var colors = [purple, blue, red, green, pink, yellow];
+ 
+var sound;
+
+//let bite;
+
+function preload() {
+        
+ font1 = loadFont('data/GummyBear3.otf');
+ 
+ bite = loadImage('data/bite.png'); 
+
+  
+    // Initialize sound
+    soundFormats('mp3', 'ogg');
+    sound = loadSound('data/chomp.mp3');
+}
+
+function setup() {
+ createCanvas(windowWidth,windowHeight);
+ background(255);
+ fill(0);
+ noStroke();
+ textFont(font1);
+ words = myText.split(' ');
+ textSize(46);
+ fontSize =(height/10);
+ testText = "A";
+ colorMode(RGB, 100);
+
+ 
+  
+ 
+}
+
+
+function draw() {
+  
+//text borders to stop them from being eaten  
+push();
+fill(255);
+rect(410, 90, 670, 55);
+pop(); 
+
+push();
+fill(255);
+rect(410, 600, 720, 180);
+pop();  
+   
+//all glyphs  
+push();
+textSize(46);
+text(myText, 410, 600,800,700,300);
+pop();
+
+//pangram
+push();
+textSize(23);
+textAlign(CENTER);
+text(pangram, 415, 100,800,700,300);
+pop();
+
+}
+
+function mouseClicked(){
+  push();
+  image(bite,mouseX,mouseY,200,200);
+  //fill(255);
+  //ellipse(mouseX, mouseY, 100, 100);
+  pop();
+  //sound.setVolume(1.0);
+  sound.play();
+  
+
+}
+
+function keyTyped(){
+  testText=key;
+  background(255);
+  
+push();
+textSize(400);
+textAlign(CENTER); 
+//fill(46,244,100);
+//fill(listOfColors[int(random(0, listOfColors.length))]);
+//fill(random(100, 255), random(100, 255), random(100,255));
+fill(colors[0]); 
+text(testText,width/2,height/2);
+pop();
+ 
+}
