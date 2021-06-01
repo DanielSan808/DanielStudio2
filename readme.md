@@ -1,4 +1,4 @@
 # Hello World
 ## this is a test
 
-[Gummy Paragraph](https://danielsan808.github.io/DanielStudio2/GummyParagraph/) 
+[Gummy Paragraph](https://github.com/DanielSan808/DanielStudio2/tree/main/SAMPLER3) 
