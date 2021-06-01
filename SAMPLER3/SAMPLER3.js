@@ -4,8 +4,8 @@ var size = 46;
 var pangram = 'Sixty zippers were quickly picked from the woven jute bag.             ';
 //var listOfColors = [color('#FF9AA2'), color('#FFDAC1'), color('E2F0CB'), color('#B5EAD7'), color('#C7CEEA')];
   
-var colors = [purple, blue, red, green, pink, yellow];
- 
+var colors;
+
 var sound;
 
 //let bite;
@@ -30,11 +30,13 @@ function setup() {
  textFont(font1);
  
 purple = color(168, 111, 186);
-blue = color(159, 195, 230);
+blue = color(159, 195, 255);
 red = color(210, 8, 45);
 green = color(139, 230, 180);
 pink = color(247, 139, 209);
 yellow = color(245, 215, 122);
+
+colors = [purple, blue, red, green, pink, yellow];
 
  words = myText.split(' ');
  textSize(46);
@@ -96,7 +98,7 @@ textAlign(CENTER);
 //fill(46,244,100);
 //fill(listOfColors[int(random(0, listOfColors.length))]);
 //fill(random(100, 255), random(100, 255), random(100,255));
-fill(colors[0]); 
+fill(colors[int(random(0,5))]); 
 text(testText,width/2,height/2);
 pop();
  
