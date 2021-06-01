@@ -3,15 +3,8 @@ var myText = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ       abcdefghiklmnopqrstuvwxyz!?.,\:\;
 var size = 46;
 var pangram = 'Sixty zippers were quickly picked from the woven jute bag.             ';
 //var listOfColors = [color('#FF9AA2'), color('#FFDAC1'), color('E2F0CB'), color('#B5EAD7'), color('#C7CEEA')];
-
-  var purple = color(168, 111, 186);
-  var bluish = color(159, 195, 230);
-  var red = color(210, 8, 45);
-  var green = color(139, 230, 180);
-  var pink = color(247, 139, 209);
-  var yellow = color(245, 215, 122);
   
-  var colors = [purple, blue, red, green, pink, yellow];
+var colors = [purple, blue, red, green, pink, yellow];
  
 var sound;
 
@@ -40,10 +33,14 @@ function setup() {
  fontSize =(height/10);
  testText = "A";
  colorMode(RGB, 100);
-
  
-  
- 
+purple = color(168, 111, 186);
+bluish = color(159, 195, 230);
+red = color(210, 8, 45);
+green = color(139, 230, 180);
+pink = color(247, 139, 209);
+yellow = color(245, 215, 122);
+   
 }
 
 
