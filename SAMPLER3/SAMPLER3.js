@@ -28,18 +28,19 @@ function setup() {
  fill(0);
  noStroke();
  textFont(font1);
- words = myText.split(' ');
- textSize(46);
- fontSize =(height/10);
- testText = "A";
- colorMode(RGB, 100);
  
 purple = color(168, 111, 186);
-bluish = color(159, 195, 230);
+blue = color(159, 195, 230);
 red = color(210, 8, 45);
 green = color(139, 230, 180);
 pink = color(247, 139, 209);
 yellow = color(245, 215, 122);
+
+ words = myText.split(' ');
+ textSize(46);
+ fontSize =(height/10);
+ testText = "A";
+ 
    
 }
 
@@ -60,14 +61,15 @@ pop();
 //all glyphs  
 push();
 textSize(46);
-text(myText, 410, 600,800,700,300);
+textAlign(CENTER);
+text(myText, 410, 600,800,width/2,height/2);
 pop();
 
 //pangram
 push();
 textSize(23);
 textAlign(CENTER);
-text(pangram, 415, 100,800,700,300);
+text(pangram, 415, 100,800,width/2,height/2);
 pop();
 
 }
